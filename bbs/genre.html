@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh">
+	<head>
+		<meta charset="utf-8">
+		<title>川剧流派</title>
+		<style>
+			<!--
+			.nav{font-size: 20px;
+				 text-align: center;
+				 letter-spacing: 5px;
+				 background-color: #310506;
+				 width: 100%;
+				 height: 40px;}/*导航览结构*/
+			
+			header{padding-top: 110px;
+				   width: 100%;}/*页眉结构*/
+
+			ul{list-style-type:none;
+			   margin:0;
+			   padding-top:5px;
+			   padding-bottom:6px;}
+			
+			li{display:inline;}
+			
+			a:link,a:visited
+			{
+			font-weight:bold;
+			color:#FFFFFF;
+			text-align:center;
+			padding:15px;
+			text-decoration:none;
+			text-transform:uppercase;
+			}/*导航览链接结构*/
+
+			a:hover,a:active
+			{
+			background-color:#B2ADB5;
+			}/*导航览链接结构*/
+			
+			header.picture{background-image:url(../img/bj.jpg);width:100%;height:80px;}/*页眉背景图片*/
+		
+        	.search{width: 20%;            
+           		    margin-top: 40px;
+				    margin-left:1060px;;
+                    display: flex;}
+        	.search input{float: left;
+            			  flex: 4; 
+				          padding-left: 10px;}
+       		.search button i{font-style: normal;}/*搜索框样式*/
+			
+			main{background-color:#FFF3F3;
+				 width: 100%;}/*主要内容样式*/
+			
+			footer{background-color:#832F31;
+		           color: aliceblue;
+				   text-align: center;
+				   line-height: 1.5;
+				   width:100%;
+				   margin-top: -13px;}/*页脚样式*/
+			.map figure{margin-left: -400px;
+					margin-top: 40px;
+					text-align: center;
+					color: hsla(180,6%,37%,1.00);
+					font-size: 25px;}
+			
+			.famousPeople{width: 200px;
+				margin-left: 80%;
+				margin-top: -32%;
+				font-family: kaiti;
+				text-align: center;
+				border: outset 3px hsla(359,48%,17%,0.83);
+				background-color:hsla(0,0%,87%,0.82);}/*川剧名家部分的样式*/
+			.faction1{margin-left: 200px;
+						margin-top: -120px;
+						width: 350px;
+						height: 150px;
+						text-align: center;
+						background-color:rgba(225,199,199,1.00);
+						border: inset hsla(359,49%,84%,0.86)}
+			.faction2{margin-left: 550px;
+						margin-top: -108px;
+						width: 350px;
+						height: 150px;
+						text-align: center;
+						background-color:rgba(225,199,199,1.00);
+						border: inset hsla(359,49%,84%,0.86) thin}
+			.faction3{margin-left: 200px;
+						margin-top: 50px;
+						width: 350px;
+						height: 150px;
+						text-align: center;
+						background-color:rgba(225,199,199,1.00);
+						border: inset hsla(359,49%,84%,0.86) thin}
+			.faction4{margin-left: 550px;
+						margin-top: -170px;
+						width: 370px;
+						height: 150px;
+						text-align: center;
+						background-color:rgba(225,199,199,1.00);
+						border: inset hsla(359,49%,84%,0.86) thin}
+			hr{width: 900px;
+				border: none;
+				height: 2px;
+				background-color: rgba(209,194,194,1.00);
+				margin-left: 6%;}
+			.famousPeople a:link{color: #6B6868;
+				text-decoration:none}/*川剧动态未被访问链接颜色*/
+		
+			.famousPeople a:visited{color:#606557}/*川剧动态已被访问链接颜色*/
+		
+			.famousPeople a:hover{background-color: #F2E4E1}/*川剧动态鼠标悬浮在链接上的颜色*/
+			.landing{margin-left: 90%;
+					margin-top: -8%;}
+			.mark{border:solid #7E2222 10px;
+				  background-color: #7E2222;}
+			-->
+		</style>
+	</head>
+
+	<body>
+		<!--页眉-->
+		<header class="picture">
+			<form>
+				<div class="search">
+					<input type="text" placeholder="请输入..."/>
+					<button><i>搜索</i></button>
+				</div>
+			</form>
+			<div class="landing">
+				<a href="login.html">用户登录</a>
+			</div>
+		</header>
+	
+		<!--主要内容-->
+		<main>
+			<!--全局导航栏-->
+			<div class="nav">
+				<ul>
+					<li><a href="../index.html">首页</a></li>
+					<li><a href="skill.html" target="_blank">绝活</a></li>
+					<li><a href="aria.html" target="_blank">唱腔</a></li>
+					<li class="mark"><a href="genre.html" target="_blank">流派</a></li>
+					<li><a href="track.html" target="_blank">经典曲目</a></li>
+					<li><a href="clothing.html" target="_blank">妆容服饰</a></li>
+					<li><a href="Accompaniment.html" target="_blank">伴奏乐器</a></li>
+				</ul>
+			</div>
+			<div class="map">
+				<figure>
+					<figcaption>川剧流派分布图</figcaption>
+					<br>
+					<img src="../img/map.png" alt="川剧流派分布图" width="800">
+				
+				</figure>
+			</div>
+			<hr>
+			<div class="famousPeople"><!--川剧名家部分-->
+				<h4>川剧名家</h4>
+				<figure>
+					<a href="genre-chenshufang.html"><img src="../img/chenshufang.jpg" alt="陈书舫" width="100"></a>
+					<figcaption id="CSF">陈书舫</figcaption>
+				</figure>
+				<figure>
+					<a href="genre-jinghua.html"><img src="../img/jinghua.jpg" alt="竞华" width="100"></a>
+					<figcaption id="JH">竞华</figcaption>
+				</figure>
+				<figure>
+					<a href="genre-zhouyuxiang.html"><img src="../img/zhouyuxiang.jpg" alt="周裕祥" width="100"></a>
+					<figcaption id="ZYX">周裕祥</figcaption>
+				</figure>
+				<figure>
+					<a href="genre-zhouqihe.html"><img src="../img/zhouqihe.jpg" alt="周企何" width="100"></a>
+					<figcaption id="ZQH">周企何</figcaption>
+				</figure>
+  			</div>
+			<div class="faction">
+				<div class="faction1">
+					<h4>川西派</h4>
+					以成都为中心的绵阳地区各县，<br>
+					以胡琴为主，形成独特的“坝调”。
+				</div>
+				<div class="faction2">
+					<h4>资阳河派</h4>
+					自资中、资阳、贡及内江、泸州区和县市，<br>
+					以高腔为主，艺术风格最为谨严。
+				</div>
+				<div class="faction3">
+					<h4>川北派</h4>
+					南充为中心西充、三台、遂宁、阆中等地，<br>
+					以唱弹戏为主，受秦腔影响校多。
+				</div>
+				<div class="faction4">
+					<h4>川东派</h4>
+					川东以及重庆一带，由于来此演出的外地剧种很多，<br>导致其特点是戏路杂，声腔多样化。
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			
+			
+			
+		</main>
+		
+		<!--页脚-->
+		<footer>
+			<p><br>Copyright © 2020 川剧文化网 All rights reserved.<br>
+			  <br><br>
+			</p>
+		</footer>
+	</body>
+	</html>

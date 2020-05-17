@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="zh">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>川剧文化网</title>
+		<style>
+			<!--
+			.nav{font-size: 20px;
+				 text-align: center;
+				 letter-spacing: 5px;
+				 background-color: #310506;
+				 width: 100%;
+				 height: 40px;}/*导航览结构*/
+			
+			header{padding-top: 110px;
+				   width: 100%;}/*页眉结构*/
+
+			.nav ul{list-style-type:none;
+			   margin:0;
+			   padding-top:5px;
+			   padding-bottom:6px;}
+			
+			.nav ul li{display:inline;}
+			
+			a:link,a:visited
+			{
+			font-weight:bold;
+			color:#FFFFFF;
+			text-align:center;
+			padding:15px;
+			text-decoration:none;
+			text-transform:uppercase;
+			}/*导航览链接结构*/
+
+			a:hover,a:active
+			{
+			background-color:#B2ADB5;
+			}/*导航览链接结构*/
+			.recentNews a:link{color: #000000;
+				text-decoration:none}/*川剧动态未被访问链接颜色*/
+		
+			.recentNews a:visited{color:#243943}/*川剧动态已被访问链接颜色*/
+		
+			.recentNews a:hover{background-color: #EBDADA}/*川剧动态鼠标悬浮在链接上的颜色*/
+			
+			header.picture{background-image:url(img/bj.jpg);width:100%;height:80px;}/*页眉背景图片*/
+		
+        	.search{width: 20%;            
+           		    margin-top: 40px;
+				    margin-left:1060px;;
+                    display: flex;}
+        	.search input{float: left;
+            			  flex: 4; 
+				          padding-left: 10px;}
+       		.search button i{font-style: normal;}/*搜索框样式*/
+			
+			main{background-color:#FFF3F3;
+				 width: 100%;
+					height: 1450px}/*主要内容样式*/
+			
+			.history{margin-top: 1%;
+					margin-left: 20%;
+					 padding: 40px;
+					 width: 440px;
+					 height: auto;
+					 font-size: 17px;
+					 line-height: 25px;
+					 letter-spacing: 1.5px;
+					 text-indent: 2em;
+					 }/*川剧历史样式*/
+			.recentNews{width: 500px;
+						height: 450px;
+						position: absolute;
+						left: 300px;
+						top:1050px;
+						font-size: 17px;
+						padding: 20px;}/*川剧动态样式*/
+			.tips{margin-top: -15%;
+				margin-left: 63%;
+				  width: 300px;
+				  height: 250px;
+				  line-height: 30px;
+				  text-align: left;
+				  padding-left: 20px;
+				  border: outset 4px;
+				  color:#857B7B}
+			
+			h5{text-align: center;}
+			
+			h3{text-align: left;
+				text-indent: 2em;}
+			
+			hr{background-color:#ADADAD;
+				border: none;
+				height: 1.5px}
+			.essay1{width: 150px;
+					font-size: 13px;
+					position: absolute;
+					left: 70px;
+					border: dashed 2px hsla(0,52%,94%,1.00);
+					background-color:#F4F4F4}
+			.essay2{width: 150px;
+					font-size: 13px;
+					position: absolute;
+					left: 320px; 
+					border: dashed 2px hsla(0,52%,94%,1.00);
+					background-color:#F4F4F4 }
+			.audition{margin-left: 61%;
+						margin-top: 5%;
+						text-align: left;
+				  		padding-left: 20px;
+						text-align: center;
+						border: outset;
+						color:#857B7B;
+						width: 350px;}/*川剧试听部分样式*/
+			footer{background-color:#832F31;
+		           color: aliceblue;
+				   text-align: center;
+				   line-height: 1.5;
+				   width:100%;
+					margin-bottom: 0}/*页脚样式*/
+			
+			*{	margin: 0px;
+				padding:0px;
+				list-style: none;
+				text-decoration: none;
+			}
+			#flash{ /*根据图片的大小来设置外层div的大小*/
+				width: 70%;
+				height: 420px;
+				margin: 0 auto;
+				position: relative; /*设置div定位，方便之后图片及圆点位置的设定*/
+				border:1px solid black;
+				margin-top: 2%;
+				margin-left: 15%;
+				border: solid 3px  rgba(107,42,44,1.00);
+			}
+			#flash img{
+				width: 100%;
+				height: 100%;
+				position: absolute; /*设置所有图片重叠*/
+				left: 0px;
+				top: 0px;
+				display: none; /*设置所有图片隐藏，通过改变第一个图片的行间样式来使第一个图片显示*/
+			}
+			#flash ol{
+				width: 150px;
+				height: 25px;
+				border-radius: 20px;
+				background-color:rgba(255,255,255,0.5);
+				position: absolute;
+				left: 40%;
+				bottom: 10%;
+			}
+			#flash ol li{
+				width: 12px;
+				height: 12px;
+				margin-top:5px;
+				background-color: #fff;
+				border-radius: 50%;
+				margin-left: 15px;
+				float: left;
+			}
+				.li_1{
+				background-color: #f40; }/*设置第一个圆点背景色为红色*/
+			#flash .span-r{
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				position: absolute;
+				right: 2%;
+				top: 45%;
+				background-color: rgba(255,255,255,0.5);
+			}
+			#flash .span-r span{
+				width: 100%;
+				height:100%;
+				color:rgba(0,0,0,0.5);
+				font-size: xx-large;
+				font-weight: 700;
+				line-height: 50px;
+				margin-left: 10px;
+				cursor: pointer;
+			}
+			#flash .span-l{
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				position: absolute;
+				left: 2%;
+				top: 45%;
+				background-color: rgba(255,255,255,0.5);
+			}
+			#flash .span-l span{
+				width: 100%;
+				height:100%;
+				color:rgba(0,0,0,0.5);
+				font-size: xx-large;
+				font-weight: 700;
+				line-height: 50px;
+				margin-left: 10px;
+				cursor: pointer;
+			}
+			.landing{margin-left: 90%;
+					margin-top: -8%;}
+			-->
+		</style>
+	</head>
+
+	<body>
+		<!--页眉-->
+		<header class="picture">
+			<form>
+				<div class="search">
+					<input type="text" placeholder="请输入..."/>
+					<button><i>搜索</i></button>
+				</div>
+			</form>
+			<div class="landing">
+				<a href="bbs/login.html">用户登录</a>
+			</div>
+		</header>
+	
+		<!--主要内容-->
+		<main>
+			<!--全局导航栏-->
+			<div class="nav">
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="bbs/skill.html" target="_blank">绝活</a></li>
+					<li><a href="bbs/aria.html" target="_blank">唱腔</a></li>
+					<li><a href="bbs/genre.html" target="_blank">流派</a></li>
+					<li><a href="bbs/track.html" target="_blank">经典曲目</a></li>
+					<li><a href="bbs/clothing.html" target="_blank">妆容服饰</a></li>
+					<li><a href="bbs/Accompaniment.html" target="_blank">伴奏乐器</a></li>
+				</ul>
+			</div>	
+			<div id="flash">
+				<img src="img/history1.jpg" alt="川剧图" style="display: block">
+				<img src="img/history1.jpg" alt="川剧图">
+				<img src="img/history3.jpg" alt="川剧图">
+				<img src="img/history4.jpg" alt="川剧图">
+				<img src="img/history5.png" alt="川剧图">
+				<ol>
+					<li class="li_1"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ol>
+				<div class="span-r">
+					<span>→</span>
+				</div>
+				<div class="span-l">
+					<span>←</span>
+				</div>
+			</div>
+			<div class="history"><!--川剧历史起源部分-->
+			
+ 				<h3>川剧起源</h3>
+				<hr>
+				<p>川剧起源于何时，语焉不详，多有歧异，但形成于清代却有共识。明末清初，由于各地移民入川，以及各地会馆的先后建立，致使多种南北声腔剧种也相继流播四川各地，并且在长期的发展衍变中，与四川方言土语、民风民俗、民间音乐、舞蹈、说唱曲艺、民歌小调的融合，逐渐形成具有四川特色的声腔艺术，从而促进了四川地方戏曲剧种——川剧的发展。
+				</p>
+			</div>
+			<div class="recentNews"><!--川剧动态部分-->
+			<h3 id="news">川剧动态</h3>
+				<hr>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<img src="img/xiaodemei.jpg" alt="肖美德" width="150">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<img src="img/tianyiwufeng.jpg" alt="天衣无缝剧照" width="150">
+				<div class="essay1">
+					<a href="bbs/Intex-xiaomeide.html"><h5>川剧“文生”肖德美 从放牛娃到梅花奖得主</h5></a>
+			“川剧里小生分武生、文生，但文生又分了很多类型，包括风流潇洒、温文尔雅、瓜嗲魅秀、气派官绅、贩夫走卒等，完全形成了自己的体系和程式功法以及代表剧目。”11月3日举行的“肖德美川剧文生表演艺术专场”......
+				</div>
+				<div class="essay2">
+					
+					<a href="bbs/Intex-tianyiwufeng.html"><h5>《天衣无缝》 现代川剧的舞台四美</h5></a>
+				新编谍战川剧《天衣无缝》改编自著名编剧张勇的“谍战三部曲”小说（《一触即发》《伪装者》《贵婉日记》）之第三部《贵婉日记》。对于熟悉红色谍战题材影视剧的观众来说，本剧无疑是一部自带IP的作品，得益于小说三部曲以及......
+				</div>
+			
+			</div>
+			<div class="tips"><!--川剧小知识部分-->
+			<h3>川剧小知识</h3>
+			最著名的绝活——变脸<br>
+			流传最广的剧目——《白蛇传·金山寺》<br>
+			变脸速度能多快——5秒12变<br>
+			川剧最具创造性的声腔——高腔<br>
+			变回演员的真脸后再变出脸谱——回脸
+			
+			</div>
+			
+			<div class="audition"><!--川剧试听部分-->
+				<h3>川剧试听</h3>
+				<br>《红梅记》<br>
+			<audio controls="controls">
+  				<source src="audio/《红梅记》.mp3" type="audio/mp3" />
+			</audio>
+				<br>《做文章》<br>
+			<audio controls="controls">
+  				<source src="audio/《做文章》.mp3" type="audio/mp3" />
+			</audio>
+				<br>《八件衣》<br>
+			<audio controls="controls">
+  				<source src="audio/《八件衣》.mp3" type="audio/mp3" />
+			</audio>
+				<br>《卖画拍门》<br>
+			<audio controls="controls">
+  				<source src="audio/《卖画拍门》.mp3" type="audio/mp3" />
+			</audio>
+				<br>《花子骂相》<br>
+			<audio controls="controls">
+  				<source src="audio/《花子骂相》.mp3" type="audio/mp3" />
+			</audio>
+			
+			
+			
+			</div>
+
+		</main>
+		<!--页脚-->
+		<footer>
+			<p><br>Copyright © 2020 川剧文化网 All rights reserved.<br>
+			   <br><br>
+			</p>
+		</footer>
+		<script>
+			var div = document.getElementById('flash');//轮播图
+			var img = div.getElementsByTagName('img'); /*选中div下所有的图片*/
+			var ol = document.getElementsByTagName('ol')[0];
+			var li = ol.getElementsByTagName('li');
+			var div_r = document.getElementsByTagName('div')[1];
+			// var span_r = div_r.getElementsByTagName('span');
+			var div_l = document.getElementsByTagName('div')[2];
+			// var sapn_l = div_l.getElementsByTagName('span');
+			var len = img.length;
+			var count = 0; /*设置count来显示当前图片的序号*/
+		function run(){ /*将定时器里的函数提取到外部*/
+			count++;
+			count = count==5?0:count; /*当图片加载到最后一张时，使其归零*/
+			for(var i=0;i<len;i++){    
+				img[i].style.display = 'none'; /*利用for循环使除当前count位其他图片隐藏*/
+			}
+			img[count].style.display = 'block'; /*显示当前count的值所代表的图片*/
+			for(var i=0;i<li.length;i++){
+				li[i].style.backgroundColor = "#fff"; /*原理同上*/
+			}
+			li[count].style.backgroundColor = "#f40";
+		}
+			var timer = setInterval(run,2000); /*定义定时器，使图片每隔2s更换一次*/
+			div.onmouseover = function(){
+			clearInterval(timer);
+		}
+			div.onmouseleave = function(){ /*定义鼠标移出事件，当鼠标移出div区域，轮播继续*/
+			timer = setInterval(run,2000);
+		}
+			for(var i=0;i<len;i++){
+				li[i].index = i; /*定义index记录当前鼠标在li的位置*/
+				li[i].onmouseenter = function(){ /*定义鼠标经过事件*/
+				for(var i=0;i<len;i++){ /*通过for循环将所有图片隐藏，圆点背景设为白色*/
+					li[i].style.background = '#fff';
+					img[i].style.display = 'none';
+				}
+			this.style.background = '#f40'; /*设置当前所指圆点的背景色*/
+			img[this.index].style.display = 'block'; /*使圆点对应的图片显示*/
+			}
+		}
+			div_r.onclick = function(){ /*因为span没有设置宽高，直接把事件添加到他的父级*/
+			run(); /*直接调用现成的run函数*/
+		}
+		function reverse(){
+			count--;
+			count = count==-1?4:count;
+			for(var i=0;i<len;i++){
+				img[i].style.display = 'none'; /*利用for循环使除当前count位其他图片隐藏*/
+			}
+			img[count].style.display = 'block'; /*显示当前count的值所代表的图片*/
+			for(var i=0;i<li.length;i++){
+				li[i].style.backgroundColor = "#fff"; /*原理同上*/
+			}
+			li[count].style.backgroundColor = "#f40";
+		}
+			div_l.onclick = function(){
+			reverse(); /*重新设置函数*/
+		}
+			
+					var audios = document.getElementsByTagName("audio");//播放一个音频时其他暂停
+		// 暂停函数
+		function pauseAll() {
+			var self = this;
+			[].forEach.call(audios, function (i) {
+				// 将audios中其他的audio全部暂停
+				i !== self && i.pause();
+			})
+		}
+		// 给play事件绑定暂停函数
+		[].forEach.call(audios, function (i) {
+			i.addEventListener("play", pauseAll.bind(i));
+		})
+		</script>
+	</body>
+	
+	</html>
+

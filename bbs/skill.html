@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh">
+	<head>
+		<meta charset="utf-8">
+		<title>绝活</title>
+		<style>
+			<!--
+			.nav{font-size: 20px;
+				 text-align: center;
+				 letter-spacing: 5px;
+				 background-color: #310506;
+				 width: 100%;
+				 height: 40px;}/*导航览结构*/
+			
+			header{padding-top: 110px;
+				   width: 100%;}/*页眉结构*/
+
+			ul{list-style-type:none;
+			   margin:0;
+			   padding-top:5px;
+			   padding-bottom:6px;}
+			
+			li{display:inline;}
+			
+			.nav a:link,a:visited
+			{
+			font-weight:bold;
+			color:#FFFFFF;
+			text-align:center;
+			padding:15px;
+			text-decoration:none;
+			text-transform:uppercase;
+			}/*导航览链接结构*/
+
+			.nav a:hover,a:active
+			{
+			background-color:#B2ADB5;
+			}/*导航览链接结构*/
+			
+			header.picture{background-image:url(../img/背景图片.jpg);width:100%;height:80px;}/*页眉背景图片*/
+		
+        	.search{width: 20%;            
+           		    margin-top: 40px;
+				    margin-left:1060px;;
+                    display: flex;}
+        	.search input{float: left;
+            			  flex: 4; 
+				          padding-left: 10px;}
+       		.search button i{font-style: normal;}/*搜索框样式*/
+			
+			main{background-color:#FFF3F3;
+				 width: 100%;}/*主要内容样式*/
+			
+			footer{background-color:#832F31;
+		           color: aliceblue;
+				   text-align: center;
+				   line-height: 1.5;
+				   width:100%;
+				   margin-top: -13px;}/*页脚样式*/
+			
+			.change{text-align:center;
+					border:5px solid #FFE0E0; 
+					background:hsla(28,86%,81%,0.9);
+					width:100px;
+					height:100px;
+					border-radius:50%;
+				    position: absolute;
+				    left:210px;
+				    top:460px;
+				    font-size: 25px;}/*变脸样式*/
+			
+			.fire{text-align:center;
+				  border:5px solid #FFE0E0; 
+				  background:hsla(28,86%,81%,0.9);
+				  width:100px;
+				  height:100px;
+				  border-radius:50%;
+				  position: absolute;
+				  left:620px;
+				  top:460px;
+				  font-size: 25px;}/*喷火样式*/
+			
+			.water{text-align:center;
+				  border:5px solid #FFE0E0; 
+				  background:hsla(28,86%,81%,0.9);
+				  width:100px;
+				  height:100px;
+				  border-radius:50%;
+				  position: absolute;
+				  left:1030px;
+				  top:460px;
+			      font-size: 25px;}/*水袖样式*/
+			
+			.skill a:link{text-decoration:none;
+				          color:aliceblue;}/*绝活链接样式*/
+			
+			.img{margin-left: 60px;}/*图片样式*/
+			
+			.article{margin-left: 130px;
+				     margin-right: 130px;
+				     line-height: 1.5;
+					 text-indent: 2em;}/*文章样式*/
+			
+			.landing{margin-left: 90%;
+					 margin-top: -8%;}/*登陆样式*/
+			
+			.landing a:link,a:visited
+			{
+			font-weight:bold;
+			color:#FFFFFF;
+			text-align:center;
+			padding:15px;
+			text-decoration:none;
+			text-transform:uppercase;
+			}/*登录导航览链接结构*/
+
+			.landing a:hover,a:active
+			{
+			background-color:#B2ADB5;
+			}/*登录导航览链接结构*/
+			
+			.mark{border:solid #7E2222 10px;
+				  background-color: #7E2222;}
+
+
+			-->
+		</style>
+	</head>
+
+	<body>
+		<!--页眉-->
+		<header class="picture">
+			<!--搜索框-->
+			<form>
+				<div class="search">
+					<input type="text" placeholder="请输入..."/>
+					<button><i>搜索</i></button>
+				</div>
+			</form>
+			<!--登录-->
+			<div class="landing">
+				<a href="login.html">用户登录</a>
+			</div>
+		</header>
+	
+		<!--主要内容-->
+		<main>
+			<!--全局导航栏-->
+			<div class="nav">
+				<ul>
+					<li><a href="../index.html" target="_top">首页</a></li>
+					<li class="mark"><a href="skill.html" target="_blank">绝活</a></li>
+					<li><a href="aria.html" target="_blank">唱腔</a></li>
+					<li><a href="genre.html" target="_blank">流派</a></li>
+					<li><a href="track.html" target="_blank">经典曲目</a></li>
+					<li><a href="clothing.html" target="_blank">妆容服饰</a></li>
+					<li><a href="Accomaniment.html" target="_blank">伴奏乐器</a></li>
+				</ul>
+			</div>
+			<br><br>
+			<!--图片部分-->
+			<div class="img">
+				<img src="../img/变脸1.jpg" width="400" height="300" alt="变脸图"/>
+				<img src="../img/喷火1.jpg" width="400" height="300" alt="喷火图"/> 
+				<img src="../img/水袖1.jpg" width="400" height="300" alt="水袖图"/>
+			</div>
+			<!--绝活-->
+			<div class="skill">
+				<div class="change"><br><a href="skill-change.html" target="_top">变脸click</a></div>
+				<div class="fire"><br><a href="skill-fire.html" target="_top">喷火click</a></div>
+				<div class="water"><br><a href="skill-water.html" target="_top">水袖click</a></div>
+			</div>
+			<br>
+			<!--文章部分-->
+			<div class="article">
+				<p>川剧有很多绝活，其中“变脸”、“喷火”、“水袖”是川剧的三大绝活。除此之外还有滚灯，踢慧眼，绳索功等等。</p>
+				<p>《滚灯》是川剧中久负盛名的独门绝技，川剧小丑剧的经典之作，川剧绝活。西谚有云：“一个小丑进城，胜过一打医生”。</p>
+				<p>由演员把点燃的油灯顶在头上，做各样的动作，而不能让灯掉下来，全剧由一组组高难惊险的动作，如：翻跟斗、从板凳下钻过等，推动故事情节的发展，使观者在惊叹之中又处处令人捧腹。代表剧目《皮金滚灯》是川剧中有名的小丑戏。《皮金滚灯》讲述了纨绔子弟皮筋因赌博成性受到妻子责罚的故事。其妻让他头顶油灯在板凳上翻上翻下，做出种种高难度的动作，整个表演幽默诙谐，其中头上走灯、头上吹灯、顶灯倒立等高难度动作展现了川剧艺术独特的魅力。</p>
+			</div>
+			<br><br>
+		</main>
+		
+		<!--页脚-->
+		<footer>
+			<p><br>Copyright © 2020 川剧文化网 All rights reserved.<br><br><br>
+			</p>
+		</footer>
+	</body>
+</html>
